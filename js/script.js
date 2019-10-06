@@ -1,4 +1,5 @@
-function playGame(playerInput) {
+{
+    function playGame(playerInput) {
     clearMessages()
     let argPlayerMove
     let randomNumber = Math.floor(Math.random() * 3 + 1)
@@ -12,7 +13,7 @@ function playGame(playerInput) {
     } else if (playerInput == "3") {
         argPlayerMove = "nożyce"
     }
-    console.log('Gracz wpisał: ' + argPlayerMove);
+    //console.log('Gracz wpisał: ' + argPlayerMove);
     displayResult(argComputerMove, argPlayerMove)
     //pętle
     /*if (randomNumber == 1) {
@@ -38,33 +39,33 @@ function getMoveName(argMoveId) {
 }
 
 function displayResult(argComputerMove, argPlayerMove) {
-    console.log('moves:', argComputerMove, argPlayerMove);
+    console.log('[moves] Koputer:', argComputerMove,'| Gracz:', argPlayerMove);
     if (argComputerMove == 'kamień' && argPlayerMove == 'papier') {
-        printMessage('Ty wygrywasz!');
+        printMessage('Komputer wybrał:'+argComputerMove+'. Ty wygrywasz!');
     }
     if (argComputerMove == 'kamień' && argPlayerMove == 'nożyce') {
-        printMessage('Komputer wygrywa!');
+        printMessage('Komputer wybrał:'+argComputerMove+'. Komputer wygrywa!');
     }
     if (argComputerMove == 'kamień' && argPlayerMove == 'kamień') {
-        printMessage('Remis!');
+        printMessage('Komputer wybrał:'+argComputerMove+'. Remis!');
     }
     if (argComputerMove == 'papier' && argPlayerMove == 'papier') {
-        printMessage('Remis!');
+        printMessage('Komputer wybrał:'+argComputerMove+'. Remis!');
     }
     if (argComputerMove == 'papier' && argPlayerMove == 'kamień') {
-        printMessage('Komputer wygrywa!');
+        printMessage('Komputer wybrał:'+argComputerMove+'. Komputer wygrywa!');
     }
     if (argComputerMove == 'papier' && argPlayerMove == 'nożyce') {
-        printMessage('Ty wygrywasz!');
+        printMessage('Komputer wybrał:'+argComputerMove+'. Ty wygrywasz!');
     }
     if (argComputerMove == 'nożyce' && argPlayerMove == 'papier') {
-        printMessage('Komputer wygrywa!');
+        printMessage('Komputer wybrał:'+argComputerMove+'. Komputer wygrywa!');
     }
     if (argComputerMove == 'nożyce' && argPlayerMove == 'kamień') {
-        printMessage('Ty wygrywasz!');
+        printMessage('Komputer wybrał:'+argComputerMove+'. Ty wygrywasz!');
     }
     if (argComputerMove == 'nożyce' && argPlayerMove == 'nożyce') {
-        printMessage('Remis!');
+        printMessage('Komputer wybrał:'+argComputerMove+'. Remis!');
     }
 }
 
@@ -87,3 +88,4 @@ let buttonPaper = document.getElementById('play-paper');
 buttonRock.addEventListener('click', buttonClickedRock);
 buttonPaper.addEventListener('click', buttonClickedPaper);
 buttonScrissors.addEventListener('click', buttonClickedScrissors);
+}
