@@ -19,3 +19,30 @@ if (randomNumber == 1) {
 } else {
     computerMove = "nożyce"
 }
+if( computerMove == 'kamień' && playerMove == 'papier'){
+    printMessage('Ty wygrywasz!');
+  }
+  if( computerMove == 'kamień' && playerMove == 'nożyce'){
+    printMessage('Komputer wygrywa!');
+  }
+  if( computerMove == 'kamień' && playerMove == 'kamień'){
+    printMessage('Remis!');
+  }
+  if( computerMove == 'papier' && playerMove == 'papier'){
+    printMessage('Remis!');
+  }
+  if( computerMove == 'papier' && playerMove == 'kamień'){
+    printMessage('Komputer wygrywa!');
+  }
+  if( computerMove == 'papier' && playerMove == 'nożyce'){
+    printMessage('Ty wygrywasz!');
+  }
+  if( computerMove == 'nożyce' && playerMove == 'papier'){
+    printMessage('Komputer wygrywa!');
+  }
+  if( computerMove == 'nożyce' && playerMove == 'kamień'){
+    printMessage('Ty wygrywasz!');
+  }
+  if( computerMove == 'nożyce' && playerMove == 'nożyce'){
+    printMessage('Remis!');
+  }
