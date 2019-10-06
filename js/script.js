@@ -1,7 +1,15 @@
-let computerMove = `kamień`;
+let computerMove
+let playerMove 
+let randomNumber = Math.floor(Math.random() * 3 + 1)
+let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
+console.log('Gracz wpisał: ' + playerInput);
 
-printMessage('Zagrałem ' + computerMove + '! Jeśli Twój ruch to papier, to wygrywasz!');
+if(playerInput == '1'){
+  playerMove = 'kamień';
+} else if (playerInput == "2") {
+    playerMove = "papier"
+} else {
+    playerMove = "nożyce"
+}
 
-let playerMove = `papier`;
-
-printMessage('Zagrałem ' + playerMove + '! Jeśli Twój ruch to papier, to wygrywasz!');
+//coś nie chce mi dodać commita
