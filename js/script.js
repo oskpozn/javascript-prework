@@ -1,26 +1,28 @@
-let computerMove = getMoveName(randomNumber)
-let playerMove
-let randomNumber = Math.floor(Math.random() * 3 + 1)
-let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
-console.log('Gracz wpisał: ' + playerInput);
+function playGame(playerInput) {
+    clearMessages()
+    let argPlayerMove
+    let randomNumber = Math.floor(Math.random() * 3 + 1)
+    argComputerMove = getMoveName(randomNumber)
+    //let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
-if (playerInput == '1') {
-    playerMove = 'kamień';
-} else if (playerInput == "2") {
-    playerMove = "papier"
-} else if (playerInput == "3") {
-    playerMove = "nożyce"
+    if (playerInput == '1') {
+        argPlayerMove = 'kamień';
+    } else if (playerInput == "2") {
+        argPlayerMove = "papier"
+    } else if (playerInput == "3") {
+        argPlayerMove = "nożyce"
+    }
+    console.log('Gracz wpisał: ' + argPlayerMove);
+    displayResult(argComputerMove, argPlayerMove)
+    //pętle
+    /*if (randomNumber == 1) {
+        computerMove = "kamień"
+    } else if (randomNumber == 2) {
+        computerMove = "papier"
+    } else if (randomNumber == 3) {
+        computerMove = "nożyce"
+    }*/
 }
-//pętle
-/*if (randomNumber == 1) {
-    computerMove = "kamień"
-} else if (randomNumber == 2) {
-    computerMove = "papier"
-} else if (randomNumber == 3) {
-    computerMove = "nożyce"
-}*/
-
-
 //funkcje
 function getMoveName(argMoveId) {
     if (argMoveId == 1) {
@@ -65,3 +67,23 @@ function displayResult(argComputerMove, argPlayerMove) {
         printMessage('Remis!');
     }
 }
+
+function buttonClickedRock() {
+    playGame(1)
+}
+
+function buttonClickedPaper() {
+    playGame(2)
+}
+
+function buttonClickedScrissors() {
+    playGame(3)
+}
+
+let buttonRock = document.getElementById('play-rock');
+let buttonScrissors = document.getElementById('play-scrissors');
+let buttonPaper = document.getElementById('play-paper');
+
+buttonRock.addEventListener('click', buttonClickedRock);
+buttonPaper.addEventListener('click', buttonClickedPaper);
+buttonScrissors.addEventListener('click', buttonClickedScrissors);
