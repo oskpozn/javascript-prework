@@ -12,4 +12,3 @@ if(playerInput == '1'){
     playerMove = "nożyce"
 }
 
-//coś nie chce mi dodać commita
